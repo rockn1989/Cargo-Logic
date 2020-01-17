@@ -1,0 +1,28 @@
+
+
+<form action="">
+	<div class="uk-grid">
+		<div class="uk-width-1-2@s">
+			<div class="uk-grid">
+				<div class="uk-width-1-2@m">
+					<input type="text" placeholder="Номер телефона">
+				</div>
+				<div class="uk-width-1-2@m">
+					{% if btnFill == true %}
+						<button type="submit" class="btn-yellow">Проверить пропуск</button>
+					{% else %}
+						<button type="submit">Проверить пропуск</button>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		
+		<div class="uk-width-1-2@s">
+			<p>
+				Ежедневная проверка наличия пропусков в реестре ДТ Москвы. 
+				Предупреждения об истечении сроков действия пропусков, штрафах и сроках действия ДК. 
+				Бесплатно для любого количества номеров
+			</p>
+		</div>
+	</div>
+</form>

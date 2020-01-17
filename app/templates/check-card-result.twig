@@ -1,0 +1,48 @@
+{% extends "layouts/default.twig" %}
+{% set title="Проверить пропуск" %}
+{% block content %}
+	<section class="content-section">
+		<div class="uk-container">
+			<h1>Проверить пропуск на грузовой автомобиль в Москву</h1>
+			<div class="block-wrap">
+				{% include "components/form.twig" with {btnFill: true} %}
+			</div>
+		</div>
+	</section>
+
+	<section class="content-section">
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h2>Проверить пропуск на грузовой автомобиль в Москву</h2>
+					<p class="lead">
+						Пропуск на автомобиль с таким номером найти не удалось. Если вы не ошиблись в номере автомобиля, это означает что пропуск на этот автомобиль отсутствует в реестре пропусков дептранса.
+					</p>
+					<p class="lead">
+						Возможно вы уже подали запрос на получение пропуска и он еще выполняется или пропуск выдан сегодня - в реестр информация о пропуске попадает с задержкой примерно в час.
+					</p>
+					<div class="block-wrap">
+						<p class="lead">
+							Если же вам нужен пропуск - оставьте свой телефон, мы свяжемся с вами или позвоните нам сейчас по номеру 8 (499) 130-22-33
+						</p>
+					</div>
+				</div>
+				<div class="uk-width-1-3@m">
+					<img src="https://via.placeholder.com/300x300" alt="">
+				</div>
+				<div class="uk-width-1-1">
+					<div class="block-wrap">
+						{% include "components/form.twig" with {btnFill: true} %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content-section">
+		<div class="uk-container">
+			{% include "components/validate-card.twig" %}
+		</div>
+	</section>
+
+{% endblock %}

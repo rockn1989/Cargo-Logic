@@ -1,0 +1,356 @@
+{% extends "layouts/default.twig" %} 
+{% set title="Главная" %} 
+{% block content %}
+{% set main = true %}
+
+	<section class="content-group">
+		<div class="uk-container">
+			{% include "components/service-cards.twig" with {btnFill: true} %}
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			<h2>Действующие ограничения на движение грузового транспорта в Москве</h2>
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<p>
+						В настоящее время в соответствии с постановлением Правительства Москвы от 22.08.2011 № 379-ПП на 
+						территории города Москвы установлен ряд ограничений на движение грузовых транспортных средств.
+					</p>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h3>Запрет по экологическому классу</h3>
+					<h4>Москва в пределах ТТК Euro 3 и выше</h4>
+					<div class="block-wrap">
+						<p>
+							Запрещен въезд в центральную часть города, ограниченную Третьим транспортным кольцом (далее - ТТК), и движение по ТТК грузовых транспортных средств, 
+							соответствующих по экологическим характеристикам требованиям ниже экологического класса 3
+						</p>
+					</div>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h4>МКАД, кроме ТТК Euro 2 и выше</h4>
+					<p>
+						Запрещен въезд в часть города, ограниченную Московской кольцевой автомобильной дорогой (далее - МКАД) до территории города Москвы, ограниченной ТТК, и движение по МКАД грузовых транспортных средств, 
+						соответствующих по экологическим характеристикам требованиям ниже экологического класса 2.
+					</p>
+					<div class="block-wrap">
+						<blockquote>
+							Штраф по 12.16 ч.7 КОАП в размере 5 000 рублей за нарушение требований знаков, 
+							запрещающих движение грузовиков, в Москве и Санкт-Петербурге
+						</blockquote>
+					</div>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h3>Ограничение по тоннажу и времени</h3>
+					<h4>Без пропуска более 12 тонн Москва в пределах МКАД  с 6:00 до 22:00</h4>
+					<p>
+						Въезд и движение по территории города Москвы, ограниченной Московской кольцевой 
+						автомобильной дорогой (далее - МКАД), и движение по МКАД грузовых автотранспортных средств разрешенной максимальной массой более 12 тонн.
+					</p>
+					<p>
+						Пропуск на грузовой автомобиль для передвижения по Москве в пределах МКАД и 
+						по МКАД бесплатно оформляется на сайте мосуслуг.
+					</p>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h4>
+						Без пропуска более 1 тонны Москва в пределах ТТК с 6:00 до 22:00 
+					</h4>
+					<p>
+						Въезд и движение по территории города Москвы, ограниченной ТТК, 
+						и движение по ТТК грузового автотранспорта грузоподъемностью более 1 тонны.
+					</p>
+					<p>
+						Пропуск на грузовой автомобиль для передвижения по Москве в пределах ТТК и в 
+						пределах СК бесплатно оформляется на сайте мосуслуг.
+					</p>
+					<blockquote>
+						Штраф по 12.16 ч.7 КОАП в размере 5 000 рублей за нарушение требований знаков, 
+						запрещающих движение грузовиков, в Москве и Санкт-Петербурге.
+					</blockquote>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			<h3>Зоны действия пропусков на грузовые автомобили в Москву</h3>
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<table>
+							<thead>
+								<tr>
+									<th>Зона</th>
+									<th>Место действия</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for i in 0..3 %} 
+								<tr>
+									<td data-attr="Зона">Зона «СК» (Садовое кольцо)</td>
+									<td data-attr="Место действия">
+										Пропуск в эту зону разрешает движение без ограничений в 
+										пределах МКАД
+									</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+						<p>
+							Кроме того, в Московской области можно оформить пропуск для грузовых автомобилей 
+							разрешенной максимальной массой более 12 тонн, которым в период с 06:00 до 22:00 
+							нужно проехать по МКАД (не въезжая на территорию внутри МКАД) транзитом или добраться 
+							до стоянки, места погрузки или разгрузки, находящихся в Подмосковье. 
+							Узнать об этом подробнее можно на портале государственных и муниципальных услуг Московской области.
+						</p>
+				</div>
+				<div class="uk-width-1-3@m">
+					<!-- begin side-block -->
+					<div class="side-block">
+						<div class="img"></div>
+						<div class="text">
+							<img src="img/media/allzone.png" alt="">
+							<a href="">Подробная карта зон действия пропусков</a>
+						</div>
+					</div><!-- end side-block -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			{% include "components/form.twig" with {btnFill: true} %}
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			{% include "components/form.twig" with {btnFill: true} %}
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h3>Список необходимых для оформления пропуска документов</h3>
+					<ul>
+						<li>водительское удостоверение с соответствующими категориями и подкатегориями; </li>
+						<li>паспорт транспортного средства (ПТС); </li>
+						<li>свидетельство о регистрации транспортного средства (СТС); </li>
+						<li>диагностическая карта с заключением о соответствии грузового автотранспортного средства обязательным требованиям безопасности; </li>
+						<li>документ, подтверждающий полномочия представителя заявителя (если запрос подает представитель);</li>
+						<li>документ, подтверждающий право пользования грузовым автотранспортным средством (если вы не являетесь владельцем автомобиля); </li>
+						<li>дополнительные документы (в зависимости от того, для какой цели оформляется пропуск).</li>
+					</ul>
+					<p>
+						Более подробно про <a href="">требования к документам для получения пропуска</a> на въезд грузового автомобиля в Москву.
+					</p>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h3>Сроки оформления пропусков для грузовых автомобилей на МКАД, ТТК и СК</h3>
+					<h4>Срок оформления разового пропуска - 1-2 рабочих дня</h4>
+					{% include "components/triangle-list.twig" %}
+					<p>
+						По нашей практике при передаче нам всех сканов документов до 12:00 мы успеваем получить пропуск в этот же рабочий день. 
+					</p>
+					<div class="cta-link">
+						<div class="cta-link__img">
+							<img src="https://via.placeholder.com/50x50x" alt="">
+						</div>
+						<div class="cta-link__text">
+							Мониторинг можно подключить в нашем чатботе <a href="">@TruckDocsBot</a>
+							Мониторинг можно подключить в нашем чатботе <a href="">@TruckDocsBot</a>
+							Мониторинг можно подключить в нашем чатботе <a href="">@TruckDocsBot</a>
+							Мониторинг можно подключить в нашем чатботе <a href="">@TruckDocsBot</a>
+							Мониторинг можно подключить в нашем чатботе <a href="">@TruckDocsBot</a>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-3@m">
+					{% include "components/side-block.twig" %}
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h3>С нами уже сотрудничают десятки компаний, присоединяйтесь!</h3>
+					{% include "components/slider.twig" %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-1-1">
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, itaque!
+					</p>
+					<div>
+						<h1>Title</h1>
+					</div>
+					<h2>Title</h2>
+					<h3>Title</h3>
+					<h4>Title</h4>
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+						consequuntur.
+					</p>
+				</div>
+			</div>
+
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<table>
+						<thead>
+							<tr>
+								<th>Серия и номер</th>
+								<th>Тип</th>
+								<th>Зона действия</th>
+								<th>Срок действия</th>
+								<th>Статус</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for i in 0..4 %} {% if i == 1 %}
+							<tr class="error">
+								<td data-attr="Серия и номер">БА 0521923</td>
+								<td data-attr="Тип">Сроком до года</td>
+								<td data-attr="Зона действия">СК</td>
+								<td data-attr="Срок действия">09.09.2019 - 18.08.2020</td>
+								<td data-attr="Статус">Аннулирован</td>
+							</tr>
+							{% endif %}
+							<tr>
+								<td data-attr="Серия и номер">БА 0521923</td>
+								<td data-attr="Тип">Сроком до года</td>
+								<td data-attr="Зона действия">СК</td>
+								<td data-attr="Срок действия">09.09.2019 - 18.08.2020</td>
+								<td data-attr="Статус">Аннулирован</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Услуга</th>
+								<th>Описание</th>
+								<th>Цена</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for i in 0..4 %} {% if i == 1 %}
+							<tr class="error">
+								<td data-attr="Услуга">
+									<a href="">Ежедневный мониторинг действительности пропусков</a>
+								</td>
+								<td data-attr="Описание">
+									Ежедневная проверка наличия пропусков в реестре ДТ Москвы.
+									Предупреждения об истечении сроков действия пропусков, штрафах и
+									сроках действия ДК.
+								</td>
+								<td data-attr="Цена">Бесплатно для любого количества номеров</td>
+							</tr>
+							{% endif %}
+							<tr>
+								<td data-attr="Услуга">
+									<a href="">Ежедневный мониторинг действительности пропусков</a>
+								</td>
+								<td data-attr="Описание">
+									Ежедневная проверка наличия пропусков в реестре ДТ Москвы.
+									Предупреждения об истечении сроков действия пропусков, штрафах и
+									сроках действия ДК.
+								</td>
+								<td data-attr="Цена">Бесплатно для любого количества номеров</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<div class="uk-width-1-3@m">
+					<div class="side-block">
+						<div class="img">
+							<img src="https://via.placeholder.com/80x100" alt="" />
+						</div>
+						<div class="text">
+							<p>
+								Постановление Правительства Москвы от 22.08.2011 No 379-ПП «Об
+								ограничении движения грузового автотранспорта в городе Москве и
+								признании утратившими силу отдельных правовых актов Правительства
+								Москвы»
+							</p>
+							<a href="">п.1.1. Постановления 379-ПП</a>
+						</div>
+					</div>
+
+					<div class="side-block">
+						<div class="img">
+							<img src="https://via.placeholder.com/100x100" alt="" />
+						</div>
+						<div class="text">
+							<a href="">п.1.1. Постановления 379-ПП</a>
+							<p>
+								Постановление Правительства Москвы от 22.08.2011 No 379-ПП «Об
+								ограничении
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content-group">
+		<div class="uk-container">
+			{% include "components/service-cards.twig" with {btnFill: true} %}
+		</div>
+	</section>
+{% endblock %}

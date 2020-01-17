@@ -1,0 +1,17 @@
+{% extends "layouts/default.twig" %}
+{% set title="Вопросы и ответы" %}
+{% block content %}
+
+	<section class="content-block">
+		<div class="uk-container">
+			<h1>Вопросы и ответы по пропускам в Москву для грузовых автомобилей</h1>
+			{% include "components/form.twig" with {btnFill: true} %}
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					{% include "components/faq.twig" %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

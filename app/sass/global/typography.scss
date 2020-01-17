@@ -1,0 +1,62 @@
+/*______ Start Typography ______*/
+
+h1,
+h2,
+h3,
+h4 {
+	color: $gray;
+	font-family: $mainFont;
+	font-weight: bold;
+}
+
+* + h1,
+* + .title-h1 {
+	margin-top: 80px;
+}
+* + h2,
+* + .title-h2 {
+	margin-top: 60px;
+}
+* + h3,
+* + .title-h3 {
+	margin-top: 40px;
+}
+* + h4,
+* + .title-h4 {
+	margin-top: 40px;
+}
+h1,
+.title-h1 {
+	margin-bottom: 40px;
+	font-size: 44px;
+	//line-height: 52px;
+	line-height: 44px;
+}
+
+h2,
+.title-2 {
+	margin-bottom: 40px;
+	font-size: 36px;
+	line-height: 42px;
+}
+
+h3,
+.title-3 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+h4,
+.title-4 {
+	margin-bottom: 20px;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+p.lead {
+	font-size: 21px;
+	line-height: 31px;
+}
+
+/*______ End Typography ______*/

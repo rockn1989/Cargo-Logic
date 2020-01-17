@@ -1,0 +1,94 @@
+/*______ HEADER ______*/
+
+.header {
+	&__desc {
+		color: $white;
+		background: $blue;
+		a {
+			color: $white;
+		}
+	}
+}
+
+.logo {
+	padding-left: 50px;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	background: url('https://via.placeholder.com/45x45') 0 center no-repeat;
+	&:hover {
+		text-decoration: none;
+	}
+	span {
+		display: block;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+	&__slogan {
+		margin-bottom: 5px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 24px;
+	}
+	&__subtitle {
+		font-size: 12px;
+		line-height: 12px;
+	}
+}
+
+.timework {
+	font-size: 14px;
+}
+
+/*______ Start Top-bar ______*/
+
+.top-bar {
+	padding: 10px 0;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-direction: column;
+	a {
+		display: block;
+	}
+}
+
+/*______ End Top-bar ______*/
+
+
+/*______ Start Header Nav ______*/
+
+.uk-nav {
+	height: 100%;
+	.uk-navbar-nav {
+		height: 100%;
+		justify-content: space-between;
+		&>li {
+			&>a {
+				height: 100%;
+				color: $white;
+				font-weight: bold;
+				white-space: nowrap;
+			}
+		}
+	}
+	.uk-dropdown {
+		margin-top: 0;
+		padding: 10px 25px;
+		background: $blue;
+		box-shadow: none;
+	}
+	.uk-dropdown-nav {
+		a {
+			color: $white;
+			font-size: 16px;
+		}
+	}
+}
+
+/*______ End Header Nav ______*/
+
+/*______ END HEADER ______*/

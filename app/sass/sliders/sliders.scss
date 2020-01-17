@@ -1,0 +1,23 @@
+/*______ SLIDERS ______*/
+
+.slider {
+	margin-bottom: 40px;
+	.uk-position-small {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 10px;
+		background: $blue;
+		color: $white;
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+	li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/*______ END SLIDERS ______*/

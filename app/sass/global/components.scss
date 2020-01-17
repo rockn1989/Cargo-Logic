@@ -1,0 +1,402 @@
+/*______ COMPONENTS ______*/
+
+.cta-link {
+	margin: 30px 0;
+	display: flex;
+	align-items: center;
+	&__img {
+		margin-right: 20px;
+		flex-shrink: 0;
+	}
+}
+
+table {
+	margin-bottom: 40px;
+	width: 100%;
+	border-spacing: 0;
+	a {
+		text-decoration: underline;
+	}
+	thead {
+		text-align: left;
+	}
+	th,
+	td {
+		padding: 12px 16px;
+		background: $lightGray;
+		border: 5px solid $white;
+	}
+	tr {
+		&:first-child {
+			th {
+				border-top: 0;
+			}
+		}
+		&:last-child {
+			td:last-child {
+				border-bottom: 0;
+			}
+		}
+		th:first-child,
+		td:first-child {
+			border-left: 0;
+		}
+	}
+	@media (max-width: $mob-s) {
+		width: 100%;
+		thead {
+			display: none;
+		}
+		tr {
+			margin-bottom: 10px;
+			display: block;
+		}
+		td,
+		th {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			border-left: none;
+			border-right: none;
+			border-bottom: 5px solid $white;
+			&:before {
+				content: attr(data-attr);
+				margin-bottom: 10px;
+				width: 100%;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.side-block {
+	margin-bottom: 50px;
+	@include clearfix();
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.img {
+		margin-right: 20px;
+		max-width: 80px;
+		min-height: 100px;
+		width: 100%;
+		float: left;
+		img {
+			max-width: 100%;
+		}
+	}
+	.text {
+		overflow: hidden;
+		font-size: 14px;
+		line-height: 18px;
+		p {
+			margin-bottom: 10px;
+		}
+		a {
+			margin-bottom: 10px;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}
+
+/*______ Start Top baner ______*/
+
+.top-banner {
+	padding: 40px 0 0;
+	h1,
+	.title-h1 {
+		margin-bottom: 10px;
+	}
+}
+
+/*______ End Top baner ______*/
+
+/*______ Start Service Card ______*/
+
+.service-card-list {
+	.service-card {
+		@media (min-width: $mob-xs) {
+			margin-bottom: 30px !important;
+		}
+		@media (min-width: $tablet-w) {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+.service-card {
+	position: relative;
+	margin-bottom: 30px;
+	border-radius: $bradius;
+	background: $lightGray;
+	@media (min-width: $mob-xs) {
+		padding: 40px 30px;
+	}
+	@media (min-width: $tablet-w) {
+		padding: 40px 30px 195px;
+		height: 100%;
+	}
+	&__title {
+		margin-bottom: 10px;
+		font-size: 21px;
+		line-height: 28px;
+		font-weight: bold;
+	}
+	&__form {
+		form {
+			margin: 0;
+			padding: 0;
+		}
+		@media (min-width: $tablet-w) {
+			position: absolute;
+			bottom: 40px;
+			left: 30px;
+			right: 30px;
+		}
+	}
+}
+
+/*______ End Service Card ______*/
+
+/*______ Start Blockquote ______*/
+
+* + blockquote {
+	margin-top: 20px;
+}
+
+blockquote {
+	position: relative;
+	margin-bottom: 40px;
+	padding: 15px 30px 15px 60px;
+	background: $lightGray;
+	font-size: 16px;
+	line-height: 21px;
+	color: $gray;
+	font-style: normal;
+	border-radius: $bradius;
+	&:before {
+		content: "\20BD";
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		color: $yellow;
+		font-size: 30px;
+		line-height: 30px;
+		transform: translateY(-50%);
+	}
+}
+
+/*______ End Blockquote ______*/
+
+/*______ Start Triangle List ______*/
+
+.triangle-list {
+	@include list-reset;
+	display: flex;
+	flex-wrap: wrap;
+	@media (min-width: $mob-s) {
+		flex-wrap: nowrap;
+	}
+	li {
+		position: relative;
+		margin-bottom: 20px;
+		padding: 20px 30px 20px 15px;
+		display: block;
+		border: 2px solid $yellow;
+		background: $lightGray;
+		/* 		&:nth-child(odd) {
+			clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0 100%, 0 48%, 0 1%);
+			clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0 100%, 22% 50%, 0 1%);
+		}
+		&:nth-child(even) {
+			clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0 100%, 22% 50%, 0 1%);
+		} */
+		@media (min-width: $tablet-w) {
+			margin-bottom: none;
+		}
+		&:after {
+			position: absolute;
+			top: 16px;
+			right: -25px;
+			width: 166px;
+			height: 166px;
+			border-left: solid 1px #ccc;
+			border-top: solid 1px #ccc;
+			transform: rotate(134deg) skewX(-10deg) skewY(-10deg);
+			background: #eee
+				linear-gradient(45deg, white, #f1f1f1 37%, #e1e1e1 57%, #f6f6f6);
+			//content: "";
+		}
+	}
+	&__title {
+		margin-bottom: 5px;
+		color: $yellow;
+	}
+	&__text {
+		line-height: 24px;
+	}
+}
+
+/*______ End Triangle List ______*/
+
+/*______ Start Validate Card ______*/
+
+.validate-card {
+	&.result-success {
+		.card-data {
+			background: $green;
+		}
+	}
+	&.result-error {
+		.card-data {
+			background: $red;
+		}
+	}
+}
+
+.card-data {
+	padding: 50px 8%;
+	color: $gray;
+	border-radius: $bradius;
+	&__header {
+		margin-bottom: 30px;
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+	}
+	&__body {
+	}
+	&__label {
+		margin-bottom: 8px;
+		font-size: 15px;
+	}
+	&__fieldset {
+		margin-bottom: 25px;
+	}
+	&__field {
+		padding: 0 15px;
+		display: flex;
+		align-items: center;
+		height: 50px;
+		font-weight: bold;
+		background: $white;
+		border-radius: $bradius;
+	}
+	&__result-text {
+		margin: 40px 0;
+	}
+}
+
+.zone {
+	&__subtitle {
+		text-align: center;
+	}
+}
+
+/*______ End Validate Card ______*/
+
+/*______ Start FAQ ______*/
+
+.faq-list {
+	@include list-reset;
+	margin-bottom: 40px;
+	li {
+		margin-bottom: 40px;
+	}
+}
+
+/*______ End FAQ ______*/
+
+/*______ Start Tariff Card ______*/
+
+.tariff-card {
+	position: relative;
+
+	height: 100%;
+	border: 1px solid $blue;
+	border-radius: $bradius;
+	overflow: hidden;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 30px !important;
+		height: auto;
+		padding-bottom: 0;
+	}
+	@media (min-width: $tablet-w) {
+		height: 100%;
+		padding-bottom: 80px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-bottom: 0 !important;
+		padding-bottom: 80px;
+	}
+	&__header {
+		padding: 25px 0 15px;
+		color: $white;
+		font-size: 21px;
+		text-align: center;
+		background: $blue;
+	}
+	&__body {
+		padding: 30px 10%;
+		text-align: center;
+	}
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		right: 10%;
+		padding: 30px 10%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 21px;
+		font-weight: bold;
+		border-top: 1px dashed #858585;
+		@media (min-width: $mob-xs) {
+			position: static;
+		}
+		@media (min-width: $tablet-w) {
+			position: absolute;
+		}
+		.price {
+			font-size: 36px;
+			white-space: nowrap;
+		}
+	}
+	&__fieldset {
+		margin-bottom: 20px;
+	}
+	&__subtitle {
+		font-size: 14px;
+		line-height: 16px;
+		color: #858585;
+	}
+	&__val {
+		margin-bottom: 6px;
+		//font-size: 21px;
+	}
+}
+
+.active-list {
+	@include list-reset;
+	margin-bottom: 5px;
+	text-align: center;
+	li {
+		padding: 2px 10px;
+		display: inline-block;
+		vertical-align: top;
+		border-radius: $bradius;
+		border: 1px solid transparent;
+		text-transform: uppercase;
+		cursor: pointer;
+		&.checked {
+			border-color: $blue;
+		}
+	}
+}
+
+/*______ End Tariff Card ______*/
+
+/*______ END COMPONENTS ______*/
