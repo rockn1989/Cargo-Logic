@@ -1,8 +1,16 @@
 /*______ MAIN CONTENT ______*/
 
 main.main {
-	padding: 80px 0;
 	min-height: calc(100vh - 350px);
+	@media (min-width: $mob-xs) {
+		padding: 30px 0;
+	}
+	@media (min-width: $tablet-w) {
+		padding: 60px 0;
+	}
+	@media (min-width: $desk-w) {
+		padding: 80px 0;
+	}
 	a {
 		text-decoration: underline;
 	}

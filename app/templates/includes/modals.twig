@@ -1,3 +1,25 @@
 {% block content %}
 
+<div id="modal-auth" class="modal-auth default-modal" uk-modal>
+	<div class="uk-modal-dialog">
+  	<button class="uk-modal-close" type="button" uk-close></button>
+  	<div class="uk-modal-body">
+  		<div class="title-h3">Вход на сайт</div>
+			<form action="" class="default-form auth-form">
+				<fieldset>
+					<input id="auth-name" type="text" name="auth-name" placeholder="Логин">
+				</fieldset>
+				<fieldset>
+					<input id="auth-password" type="password" name="auth-password" placeholder="Пароль">
+				</fieldset>
+				<input type="submit" class="btn btn-yellow" value="Войти">
+			</form>
+			<div class="form-politics">
+				<a href="" class="uk-float-left" uk-toggle="#forgot-password">Забыли пароль?</a>
+				<a href="" class="uk-float-right" uk-toggle="#modal-reg">Зарегистрироваться</a>
+			</div>
+  	</div> 
+  </div>
+</div>
+
 {% endblock %}

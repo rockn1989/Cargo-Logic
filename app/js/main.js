@@ -1,43 +1,42 @@
 "use strict";
 
 $(function() {
-	/*______ Показывать форму на мобильных устройствах ______*/
+	/*______ Переключение тарифов вместе с табами ______*/
 
-	var $mobileForm = $(".mobile-form");
+	let switcher = UIkit.switcher(".js__map-switcher");
 
-	$(".js__show-form").on("click", function(e) {
-		e.preventDefault();
-		$mobileForm
-			.slideToggle("350")
-			.find("input")
-			.focus();
-	});
+	function setHandlerToggle(tabActive) {
+		let parentElementList = $(this)
+			.parents("ul")
+			.find("li");
+		let idx = parentElementList.index($(this));
 
-	/*______ Маска формы ______*/
-
-	$(".js__input-phone")
-		.mask("+7 999 999-99-99", { clearIfNotMatch: true })
-		.focus(function(e) {
-			if (!$(this).val()) {
-				$(this).val("+7 ");
-			}
+		$.each($(".js__toggle-tab"), function(i, el) {
+			$(el)
+				.find("li")
+				.removeClass("checked");
+			$(el)
+				.find("li")
+				.eq(idx)
+				.addClass("checked");
 		});
 
-	/*______ Валидация формы ______*/
-
-	if ($("form").is(".default-form")) {
-		$(".default-form").validate({
-			rules: {
-				email: {
-					required: true,
-					email: true
-				}
-			},
-			messages: {
-				email: "Обязательноe поле"
-			}
-		});
+		if (tabActive) {
+			switcher.show(idx);
+		}
 	}
+
+	$(".js__map-switcher").on("click", "li", setHandlerToggle);
+
+	$(".js__toggle-tab").on("click", "li", function() {
+		let toggleTab = setHandlerToggle.bind(this);
+		toggleTab(true);
+
+		$(this)
+			.siblings("li")
+			.removeClass("checked");
+		$(this).addClass("checked");
+	});
 
 	/*______ Открытие мобильного подменю ______*/
 
@@ -72,19 +71,13 @@ $(function() {
 		siblingsList.stop(true, true).slideToggle("350");
 	});
 
-	/*______ Отключение UIKIT анимации для мобильных устройств ______*/
+	/*______ Маска формы ______*/
 
-	/*	UIkit.on('beforeready.uk.dom', function () {
-		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
-			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
-		};
-	});*/
-
-	/*______ Полифил для Object-fit ______*/
-
-	objectFitImages();
-
-	/*______ Полифил для SVG ______*/
-
-	/*svg4everebody();*/
+	$(".js__input-phone")
+		.mask("+7 999 999-99-99", { clearIfNotMatch: true })
+		.focus(function(e) {
+			if (!$(this).val()) {
+				$(this).val("+7 ");
+			}
+		});
 });

@@ -77,7 +77,7 @@
 					</div>
 					<div class="uk-width-1-6">
 						<div class="top-bar">
-							<a href="#" class="auth">Личный кабинет</a>
+							<a href="" class="auth" uk-toggle="#modal-auth">Личный кабинет</a>
 							<a href="tel:+74991222344" class="uk-text-bold">8 (499) 122-23-44</a>
 							<div class="timework">Пт-Пн 9:00 - 21:00</div>
 						</div>
@@ -94,8 +94,51 @@
 
 	<!-- begin header__mobile -->
 	<div class="header__mobile uk-hidden@l">
-		Mobile
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-2-3">
+					<a href="/" class="logo">
+						<span class="logo__slogan">Cargo Logic</span>	
+						<span class="logo__subtitle">Грузовая логистика</span>
+					</a>
+				</div>
+				<div class="uk-width-1-3">
+					<ul class="mobile-menu">
+						<li><a href="" uk-icon="menu" uk-toggle="target: #offcanvas-menu"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div><!-- end header__mobile -->
+
+	<!-- begin offcanvas-menu -->
+	<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<div class="uk-panel">
+				<div class="uk-panel__top">
+					<div class="contacts">
+						<a href="" class="auth" uk-toggle="#modal-auth">Личный кабинет</a>
+						<a href="tel:+74991222344" class="uk-text-bold">8 (499) 122-23-44</a>
+						<div class="timework">Пт-Пн 9:00 - 21:00</div>
+					</div>
+				</div>
+				<ul class="uk-nav">
+				{% for i in 0..4 %}
+					<li>
+						<a href="">Проверить пропуск <i class="js__menu-sublist-toggle" uk-icon="chevron-right"></i></a>
+						<ul class="menu-sublist">
+							{% for j in 0..4 %}
+							<li><a href="">Проверить пропуск на МКАД</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
+					<li><a href="">Вопросы-ответы</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- end offcanvas-menu -->
 
 </header><!-- end header -->
 {% endblock %}

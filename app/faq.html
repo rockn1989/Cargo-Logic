@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
+	
 	<!--[if lte IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 		<script src="libs/html5shiv.min.js"></script>
@@ -101,7 +102,7 @@
 					</div>
 					<div class="uk-width-1-6">
 						<div class="top-bar">
-							<a href="#" class="auth">Личный кабинет</a>
+							<a href="" class="auth" uk-toggle="#modal-auth">Личный кабинет</a>
 							<a href="tel:+74991222344" class="uk-text-bold">8 (499) 122-23-44</a>
 							<div class="timework">Пт-Пн 9:00 - 21:00</div>
 						</div>
@@ -118,8 +119,91 @@
 
 	<!-- begin header__mobile -->
 	<div class="header__mobile uk-hidden@l">
-		Mobile
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-2-3">
+					<a href="/" class="logo">
+						<span class="logo__slogan">Cargo Logic</span>	
+						<span class="logo__subtitle">Грузовая логистика</span>
+					</a>
+				</div>
+				<div class="uk-width-1-3">
+					<ul class="mobile-menu">
+						<li><a href="" uk-icon="menu" uk-toggle="target: #offcanvas-menu"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div><!-- end header__mobile -->
+
+	<!-- begin offcanvas-menu -->
+	<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<div class="uk-panel">
+				<div class="uk-panel__top">
+					<div class="contacts">
+						<a href="" class="auth" uk-toggle="#modal-auth">Личный кабинет</a>
+						<a href="tel:+74991222344" class="uk-text-bold">8 (499) 122-23-44</a>
+						<div class="timework">Пт-Пн 9:00 - 21:00</div>
+					</div>
+				</div>
+				<ul class="uk-nav">
+									<li>
+						<a href="">Проверить пропуск <i class="js__menu-sublist-toggle" uk-icon="chevron-right"></i></a>
+						<ul class="menu-sublist">
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+													</ul>
+					</li>
+									<li>
+						<a href="">Проверить пропуск <i class="js__menu-sublist-toggle" uk-icon="chevron-right"></i></a>
+						<ul class="menu-sublist">
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+													</ul>
+					</li>
+									<li>
+						<a href="">Проверить пропуск <i class="js__menu-sublist-toggle" uk-icon="chevron-right"></i></a>
+						<ul class="menu-sublist">
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+													</ul>
+					</li>
+									<li>
+						<a href="">Проверить пропуск <i class="js__menu-sublist-toggle" uk-icon="chevron-right"></i></a>
+						<ul class="menu-sublist">
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+													</ul>
+					</li>
+									<li>
+						<a href="">Проверить пропуск <i class="js__menu-sublist-toggle" uk-icon="chevron-right"></i></a>
+						<ul class="menu-sublist">
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+														<li><a href="">Проверить пропуск на МКАД</a></li>
+													</ul>
+					</li>
+									<li><a href="">Вопросы-ответы</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- end offcanvas-menu -->
 
 </header><!-- end header -->
 
@@ -137,7 +221,7 @@
 		<div class="uk-width-1-2@s">
 			<div class="uk-grid">
 				<div class="uk-width-1-2@m">
-					<input type="text" placeholder="Номер телефона">
+					<input type="text" class="js__input-phone" placeholder="Номер телефона">
 				</div>
 				<div class="uk-width-1-2@m">
 											<button type="submit" class="btn-yellow">Проверить пропуск</button>
@@ -310,19 +394,33 @@
 
 
 
+<div id="modal-auth" class="modal-auth default-modal" uk-modal>
+	<div class="uk-modal-dialog">
+  	<button class="uk-modal-close" type="button" uk-close></button>
+  	<div class="uk-modal-body">
+  		<div class="title-h3">Вход на сайт</div>
+			<form action="" class="default-form auth-form">
+				<fieldset>
+					<input id="auth-name" type="text" name="auth-name" placeholder="Логин">
+				</fieldset>
+				<fieldset>
+					<input id="auth-password" type="password" name="auth-password" placeholder="Пароль">
+				</fieldset>
+				<input type="submit" class="btn btn-yellow" value="Войти">
+			</form>
+			<div class="form-politics">
+				<a href="" class="uk-float-left" uk-toggle="#forgot-password">Забыли пароль?</a>
+				<a href="" class="uk-float-right" uk-toggle="#modal-reg">Зарегистрироваться</a>
+			</div>
+  	</div> 
+  </div>
+</div>
 
 
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
-	defer
-></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit-icons.min.js" defer></script>
-<script src="libs/slick/slick.min.js" defer></script>
-<script src="libs/svg4everybody.min.js" defer></script>
-<script src="libs/ofi.min.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </body>

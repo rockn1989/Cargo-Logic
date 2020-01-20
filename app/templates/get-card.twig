@@ -2,7 +2,7 @@
 {% set title="Оформить пропуск" %}
 {% block content %}
 
-	<section class="content-section">
+	<section class="content-group">
 		<div class="uk-container">
 			<h1>Оформить пропуск на грузовой автомобиль в Москву</h1>
 			<div class="uk-grid">
@@ -20,10 +20,44 @@
 		</div>
 	</section>
 
-	<section class="content-section">
+	<section class="content-group">
 		<div class="uk-container">
 			{% include "components/tariffs-cards.twig" %}
+			{% include "components/form.twig" %}
 		</div>
 	</section>
+
+
+	<section class="content-group">
+		<div class="uk-container">
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<h3>Список необходимых для оформления пропуска документов</h3>
+					<ul class="uk-subnav" uk-switcher>
+						<li class="uk-active"><a href="">Юридическое лицл</a></li>
+						<li><a href="">Физическое лицо</a></li>
+					</ul>		
+					<ul class="uk-switcher">
+						<li>
+							<ul>
+								<li>водительское удостоверение с соответствующими категориями и подкатегориями; </li>
+								<li>паспорт транспортного средства (ПТС); </li>
+								<li>свидетельство о регистрации транспортного средства (СТС); </li>
+								<li>диагностическая карта с заключением о соответствии грузового автотранспортного средства обязательным требованиям безопасности; </li>
+								<li>документ, подтверждающий полномочия представителя заявителя (если запрос подает представитель);</li>
+								<li>документ, подтверждающий право пользования грузовым автотранспортным средством (если вы не являетесь владельцем автомобиля); </li>
+								<li>дополнительные документы (в зависимости от того, для какой цели оформляется пропуск).</li>
+							</ul>
+						</li>
+						<li>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, sapiente.
+						</li>
+					</ul>
+					<p>Более подробно об основаниях для отказа в выдаче пропуска для грузовых автомобилей в Москву</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 {% endblock %}

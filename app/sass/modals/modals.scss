@@ -1,2 +1,68 @@
 /*______ MODALS ______*/
+
+.default-modal {
+	.uk-close {
+		position: absolute;
+		@media (min-width: $mob-xs) {
+			top: 15px;
+			right: 15px;
+		}
+		@media (min-width: $mob-s) {
+			top: 30px;
+			right: 30px;
+		}
+		svg {
+			width: 24px;
+			height: 24px;
+			color: $gray;
+			&:hover {
+				color: $gray;
+			}
+		}
+	}
+	.text {
+		margin-bottom: 15px;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.default-form {
+		padding: 25px 0;
+		max-width: 550px;
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"] {
+			width: 100%;
+		}
+		.btn {
+			max-width: 100%;
+		}
+	}
+	.uk-modal-body {
+		background: $lightGray;
+		@media (min-width: $mob-xs) {
+			padding: 30px 15px;
+		}
+		@media (min-width: $mob-s) {
+			padding: 30px;
+		}
+	}
+	.uk-modal-title {
+		margin-bottom: 20px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
+.form-politics {
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 16px;
+	a {
+		font-size: 14px;
+		line-height: 16px;
+		color: $gray;
+	}
+}
+
 /*______ END MODALS ______*/

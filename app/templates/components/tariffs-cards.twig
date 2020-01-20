@@ -1,15 +1,15 @@
 <!-- begin tariffs-cards -->
 <div class="tariffs-cards">
 	<div class="uk-grid">
-		<div class="uk-width-1-2@s uk-width-1-4@m">
+		<div class="uk-width-1-2@s uk-width-1-2@m uk-width-1-4@l">
 			<div class="tariff-card">
 				<div class="tariff-card__header">Разовый пропуск</div>
 				<div class="tariff-card__body">
 
 					<div class="tariff-card__fieldset">
 						<div class="tariff-card__val">
-							<ul class="active-list">
-								<li class="checked">Мкад</li>
+							<ul class="active-list js__toggle-tab">
+								<li class="checked">МКАД</li>
 								<li>ТТК</li>
 								<li>СК</li>
 							</ul>
@@ -45,16 +45,16 @@
 			</div>
 		</div>
 
-		<div class="uk-width-1-2@s uk-width-1-4@m">
+		<div class="uk-width-1-2@s uk-width-1-2@m uk-width-1-4@l">
 			<div class="tariff-card">
 				<div class="tariff-card__header">Долгосрочный пропуск</div>
 				<div class="tariff-card__body">
 
 					<div class="tariff-card__fieldset">
 						<div class="tariff-card__val">
-							<ul class="active-list js__active-list">
-								<li>Мкад</li>
-								<li class="checked">ТТК</li>
+							<ul class="active-list js__toggle-tab js__toggle-tab">
+								<li class="checked">МКАД</li>
+								<li>ТТК</li>
 								<li>СК</li>
 							</ul>
 						</div>
@@ -77,7 +77,7 @@
 
 					<div class="tariff-card__fieldset">
 						<div class="tariff-card__val">
-							<ul class="active-list">
+							<ul class="active-list js__toggle-price">
 								<li class="checked">Год</li>
 								<li>6 мес</li>
 								<li>3 мес</li>
@@ -93,17 +93,17 @@
 			</div>
 		</div>
 
-		<div class="uk-width-1-2@s uk-width-1-4@m">
+		<div class="uk-width-1-2@s uk-width-1-2@m uk-width-1-4@l">
 			<div class="tariff-card">
 				<div class="tariff-card__header">Разовый пропуск</div>
 				<div class="tariff-card__body">
 
 					<div class="tariff-card__fieldset">
 						<div class="tariff-card__val">
-							<ul class="active-list">
-								<li>Мкад</li>
+							<ul class="active-list js__toggle-tab">
+								<li class="checked">МКАД</li>
 								<li>ТТК</li>
-								<li class="checked">СК</li>
+								<li>СК</li>
 							</ul>
 						</div>
 						<div class="tariff-card__subtitle">Зона действия</div>
@@ -137,5 +137,41 @@
 			</div>
 		</div>
 
+		<div class="uk-width-1-2@s uk-width-1-4@l">
+			<div class="title-h3">Зоны действия пропуска</div>
+				<!-- begin area-events -->
+				<div class="area-events">
+					<ul class="uk-subnav js__map-switcher" uk-switcher>
+						<li class="uk-active"><a href="">МКАД</a></li>
+						<li><a href="">ТТК</a></li>
+						<li><a href="">СК</a></li>
+					</ul>		
+					<ul class="uk-switcher">
+						<li>
+							<img src="img/media/area-mkad.png" alt="">
+							<p>
+								Пропуск в эту зону разрешает движение в пределах МКАД по МКАД, 
+								но не  дает права движения в пределах ТТК и по ТТК
+							</p>
+						</li>
+						<li>
+							<img src="img/media/area-ttk.png" alt="">
+							<p>
+								Пропуск в эту зону разрешает движение в пределах МКАД по МКАД, 
+								но не  дает права движения в пределах ТТК и по ТТК
+							</p>
+						</li>
+						<li>
+							<img src="img/media/area-sk.png" alt="">
+							<p>
+								Пропуск в эту зону разрешает движение в пределах МКАД по МКАД, 
+								но не  дает права движения в пределах ТТК и по ТТК
+							</p>
+						</li>
+					</ul>
+				</div><!-- end area-events -->
+		</div>
+
 	</div>
 </div><!-- end tariffs-cards -->
+
